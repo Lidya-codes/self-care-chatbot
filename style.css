@@ -1,23 +1,34 @@
 body {
-  background: #fff0f5;
+  background: linear-gradient(135deg, #fff0f5, #ffe6f0);
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
   padding: 2em;
 }
 
 .chat-container {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(255, 175, 204, 0.3);
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(255, 175, 204, 0.25);
   padding: 2em;
   max-width: 500px;
   width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 h1 {
   text-align: center;
   color: #d63384;
+  margin-bottom: 1.5em;
+  font-size: 1.8em;
 }
 
 .chat-box {
@@ -26,36 +37,61 @@ h1 {
   border: 1px solid #ffd6e0;
   padding: 1em;
   margin-bottom: 1em;
-  border-radius: 10px;
-  background: #fffafc;
+  border-radius: 12px;
+  background: #fff7fb;
+  scrollbar-width: thin;
+  scrollbar-color: #ffd6e0 #fff7fb;
 }
 
 .chat-box p {
   margin: 0.5em 0;
+  line-height: 1.5;
+  font-size: 0.95em;
+  word-wrap: break-word;
+}
+
+.chat-box p strong {
+  color: #c9184a;
 }
 
 .input-area {
   display: flex;
-  gap: 10px;
+  gap: 0.75em;
+  align-items: center;
 }
 
 input {
   flex: 1;
-  padding: 0.8em;
+  padding: 0.9em 1em;
   border: 1px solid #ffd6e0;
-  border-radius: 10px;
+  border-radius: 12px;
+  font-size: 1em;
+  transition: border 0.2s ease;
+}
+
+input:focus {
+  border-color: #ffb3c6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 175, 204, 0.4);
 }
 
 button {
   background: #ffafcc;
   border: none;
-  padding: 0.8em 1.2em;
-  border-radius: 10px;
-  color: white;
-  font-weight: bold;
+  padding: 0.9em 1.2em;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
   cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 button:hover {
   background: #ff80b5;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
 }
