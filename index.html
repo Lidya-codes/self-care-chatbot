@@ -5,14 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Self-Care Chatbot 💕</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="chat-container">
-    <h1>🧠 Self-Care Chatbot</h1>
-    <div class="chat-box" id="chat-box"></div>
+    <h1>🩺 Self-Care Assistant</h1>
+
+    <div class="chat-box" id="chat-box" aria-live="polite" aria-label="Chat messages">
+      <!-- Messages will be appended here -->
+    </div>
+
     <div class="input-area">
-      <input type="text" id="user-input" placeholder="How are you feeling today?" />
-      <button onclick="handleMessage()">💌 Send</button>
+      <input 
+        type="text" 
+        id="user-input" 
+        placeholder="Tell me how you're feeling..." 
+        aria-label="Type your message" 
+        autocomplete="off"
+      />
+      <button onclick="handleMessage()" aria-label="Send message">💌 Send</button>
     </div>
   </div>
 
