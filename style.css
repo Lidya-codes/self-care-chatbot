@@ -1,21 +1,24 @@
 body {
-  background: linear-gradient(135deg, #fff0f5, #ffe6f0);
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #f9f9fb, #fcecf2);
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0;
-  padding: 2em;
 }
 
 .chat-container {
   background: #ffffff;
   border-radius: 20px;
-  box-shadow: 0 12px 24px rgba(255, 175, 204, 0.25);
+  box-shadow: 0 8px 24px rgba(216, 164, 194, 0.2), 0 4px 10px rgba(150, 150, 150, 0.05);
   padding: 2em;
-  max-width: 500px;
   width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f2d3e0;
   animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -26,61 +29,64 @@ body {
 
 h1 {
   text-align: center;
-  color: #d63384;
+  color: #b84c74;
+  font-size: 1.6em;
   margin-bottom: 1.5em;
-  font-size: 1.8em;
+  font-weight: 600;
 }
 
 .chat-box {
-  height: 300px;
-  overflow-y: auto;
-  border: 1px solid #ffd6e0;
-  padding: 1em;
-  margin-bottom: 1em;
+  background: #fefbfc;
+  border: 1px solid #e4cad6;
   border-radius: 12px;
-  background: #fff7fb;
+  padding: 1em;
+  height: 320px;
+  overflow-y: auto;
+  margin-bottom: 1.2em;
   scrollbar-width: thin;
-  scrollbar-color: #ffd6e0 #fff7fb;
+  scrollbar-color: #e9bccc transparent;
 }
 
 .chat-box p {
-  margin: 0.5em 0;
-  line-height: 1.5;
+  margin: 0.6em 0;
   font-size: 0.95em;
-  word-wrap: break-word;
+  line-height: 1.5;
+  word-break: break-word;
 }
 
 .chat-box p strong {
-  color: #c9184a;
+  color: #4c4c4c;
+  font-weight: 600;
 }
 
 .input-area {
   display: flex;
-  gap: 0.75em;
   align-items: center;
+  gap: 0.75em;
 }
 
 input {
   flex: 1;
   padding: 0.9em 1em;
-  border: 1px solid #ffd6e0;
-  border-radius: 12px;
+  border: 1px solid #e4cad6;
+  border-radius: 10px;
   font-size: 1em;
+  background-color: #fff;
   transition: border 0.2s ease;
 }
 
 input:focus {
-  border-color: #ffb3c6;
+  border-color: #cfa4b5;
   outline: none;
-  box-shadow: 0 0 5px rgba(255, 175, 204, 0.4);
+  box-shadow: 0 0 5px rgba(216, 164, 194, 0.3);
 }
 
 button {
-  background: #ffafcc;
+  background: #d98aa7;
+  color: white;
   border: none;
-  padding: 0.9em 1.2em;
-  border-radius: 12px;
-  color: #fff;
+  padding: 0.8em 1.2em;
+  border-radius: 10px;
   font-weight: 600;
   font-size: 1em;
   cursor: pointer;
@@ -88,8 +94,8 @@ button {
 }
 
 button:hover {
-  background: #ff80b5;
-  transform: translateY(-2px);
+  background: #c26f93;
+  transform: translateY(-1px);
 }
 
 button:active {
